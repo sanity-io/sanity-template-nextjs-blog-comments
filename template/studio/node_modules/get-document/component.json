@@ -1,0 +1,19 @@
+{
+  "name": "get-document",
+  "repo": "webmodules/get-document",
+  "version": "1.0.0",
+  "description": "Returns the `document` object from a DOM object",
+  "keywords": [
+    "dom",
+    "document",
+    "node",
+    "range",
+    "element",
+    "browser"
+  ],
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "dependencies": {}
+}

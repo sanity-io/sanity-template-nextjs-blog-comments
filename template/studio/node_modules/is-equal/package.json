@@ -1,0 +1,113 @@
+{
+	"name": "is-equal",
+	"version": "1.6.1",
+	"description": "Are these two values conceptually equal?",
+	"author": "Jordan Harband <ljharb@gmail.com>",
+	"funding": {
+		"url": "https://github.com/sponsors/ljharb"
+	},
+	"license": "MIT",
+	"main": "index.js",
+	"scripts": {
+		"version": "auto-changelog && git add CHANGELOG.md",
+		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+		"prepublish": "safe-publish-latest",
+		"pretest": "npm run --silent lint",
+		"test": "npm run --silent tests-only",
+		"posttest": "npx aud",
+		"tests-only": "npm run test:native && npm run test:why && npm run test:shimmed && npm run test:corejs",
+		"test:native": "node test/native",
+		"test:why": "node test/why",
+		"test:shimmed": "node test/shimmed",
+		"test:corejs": "node test/corejs",
+		"coverage": "covert test/native test/why",
+		"coverage-quiet": "covert test/native.js --quiet",
+		"lint": "eslint *.js test/*.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/inspect-js/is-equal.git"
+	},
+	"bugs": {
+		"url": "https://github.com/inspect-js/is-equal/issues"
+	},
+	"homepage": "https://github.com/inspect-js/is-equal",
+	"keywords": [
+		"equal",
+		"is",
+		"compare",
+		"comparison",
+		"equality"
+	],
+	"dependencies": {
+		"es-get-iterator": "^1.0.1",
+		"functions-have-names": "^1.2.0",
+		"has": "^1.0.3",
+		"is-arrow-function": "^2.0.3",
+		"is-bigint": "^1.0.0",
+		"is-boolean-object": "^1.0.0",
+		"is-callable": "^1.1.4",
+		"is-date-object": "^1.0.1",
+		"is-generator-function": "^1.0.7",
+		"is-number-object": "^1.0.3",
+		"is-regex": "^1.0.4",
+		"is-string": "^1.0.4",
+		"is-symbol": "^1.0.3",
+		"isarray": "^2.0.5",
+		"object-inspect": "^1.7.0",
+		"object.entries": "^1.1.0",
+		"which-boxed-primitive": "^1.0.1",
+		"which-collection": "^1.0.0"
+	},
+	"devDependencies": {
+		"@ljharb/eslint-config": "^15.0.2",
+		"auto-changelog": "^1.16.2",
+		"core-js": "^2.6.5 || ^3",
+		"covert": "^1.1.1",
+		"es6-shim": "^0.35.5",
+		"eslint": "^6.7.1",
+		"foreach": "^2.0.5",
+		"has-bigints": "^1.0.0",
+		"has-symbols": "^1.0.1",
+		"make-arrow-function": "^1.1.0",
+		"make-generator-function": "^1.1.0",
+		"replace": "^1.1.1",
+		"safe-publish-latest": "^1.1.4",
+		"semver": "^6.3.0",
+		"tape": "^4.11.0"
+	},
+	"testling": {
+		"files": "test/native.js",
+		"browsers": [
+			"iexplore/6.0..latest",
+			"firefox/3.0..6.0",
+			"firefox/15.0..latest",
+			"firefox/nightly",
+			"chrome/4.0..10.0",
+			"chrome/20.0..latest",
+			"chrome/canary",
+			"opera/10.0..12.0",
+			"opera/15.0..latest",
+			"opera/next",
+			"safari/4.0..latest",
+			"ipad/6.0..latest",
+			"iphone/6.0..latest",
+			"android-browser/4.2"
+		]
+	},
+	"engines": {
+		"node": ">= 0.4"
+	},
+	"greenkeeper": {
+		"ignore": [
+			"core-js"
+		]
+	},
+	"auto-changelog": {
+		"output": "CHANGELOG.md",
+		"template": "keepachangelog",
+		"unreleased": false,
+		"commitLimit": false,
+		"backfillLimit": false
+	}
+}

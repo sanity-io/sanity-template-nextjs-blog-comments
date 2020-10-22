@@ -1,0 +1,1 @@
+export default function setFieldArrayDirtyFields<T extends U, U extends Record<string, unknown>[], K extends Record<string, boolean | []>>(values: T, defaultValues: U, dirtyFields: Record<string, boolean | []>[], parentNode?: K, parentName?: keyof K): Record<string, boolean | []>[] | undefined;

@@ -1,0 +1,21 @@
+{
+  "name": "get-window",
+  "repo": "webmodules/get-window",
+  "version": "1.1.1",
+  "description": "Returns the `window` object from a DOM object",
+  "keywords": [
+    "dom",
+    "window",
+    "node",
+    "range",
+    "element",
+    "browser"
+  ],
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "dependencies": {
+    "webmodules/get-document": "1.0.0"
+  }
+}
