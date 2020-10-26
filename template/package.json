@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "build": "npm run build:sanity && pwd && npm run build:web",
+    "build:web": "next build",
+    "start:web": "next start",
+    "build:sanity": "cd studio && sanity build ../public/studio -y && cd .."
   },
   "dependencies": {
     "@sanity/block-content-to-react": "2.0.7",
