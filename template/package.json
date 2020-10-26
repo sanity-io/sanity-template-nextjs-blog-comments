@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@sanity/cli": "^2.0.5",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.5.2"
   }
