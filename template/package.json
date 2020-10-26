@@ -19,7 +19,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hook-form": "^6.7.0",
-    "swr": "^0.2.3"
+    "swr": "^0.2.3",
+    "next-sanity": "^0.1.5"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",

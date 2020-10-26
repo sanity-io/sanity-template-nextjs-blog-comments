@@ -1,24 +1,24 @@
-import sanityClient from '@sanity/client'
-import sanityImage from '@sanity/image-url'
+import {
+  groq,
+  createClient,
+  createImageUrlBuilder,
+  createPreviewSubscriptionHook,
+} from 'next-sanity'
 
-const options = {
-  // Find your project ID and dataset in `sanity.json` in your studio project
-  dataset: 'production',
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+const config = {
+  dataset: process.env.SANITY_STUDIO_API_DATASET,
+  projectId: process.env.SANITY_STUDIO_API_PROJECT_ID,
   useCdn: process.env.NODE_ENV === 'production',
-  // useCdn == true gives fast, cheap responses using a globally distributed cache.
-  // Set this to false if your application require the freshest possible
-  // data always (potentially slightly slower and a bit more expensive).
 }
 
-const client = sanityClient(options)
-
-export const imageBuilder = sanityImage(client)
-
-export const previewClient = sanityClient({
-  ...options,
+export const imageBuilder = createImageUrlBuilder(config)
+export const usePreviewSubscription = createPreviewSubscriptionHook(config)
+export const client = createClient(config)
+export const previewClient = createClient({
+  ...config,
   useCdn: false,
   token: process.env.SANITY_API_TOKEN,
 })
 
+export const getClient = (usePreview) => (usePreview ? previewClient : client)
 export default client
