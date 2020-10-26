@@ -4,8 +4,8 @@
     "description": "A Next.js blog with comments. This is based on Vercel's Sanity + Next.js demo.",
     "previewMedia": {
       "type": "image",
-      "src": "assets/preview.png",
-      "alt": "Vercel"
+      "src": "assets/preview-image.jpg",
+      "alt": "Sanity + Vercel"
     },
     "technologies": [
       {
