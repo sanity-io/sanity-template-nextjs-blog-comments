@@ -2,7 +2,7 @@
 
 This is a demo of how to add a simple comment section to blog post using [Next.js](https://nextjs.org), [Sanity.io](https://www.sanity.io), and [Vercel](https://vercel.com).
 
-# Note: You automatically have an env variable for your dataset and project id, but you'll need to create a token in [manage.sanity.io](https://manage.sanity.io) to allow the Starter's comments to post to your Studio
+## Note: You automatically have an env variable for your dataset and project id, but you'll need to create a token in [manage.sanity.io](https://manage.sanity.io) to allow the Starter's comments to post to your Studio
 
 ### Running the front-end
 
