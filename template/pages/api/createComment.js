@@ -1,9 +1,16 @@
-import {previewClient} from '../../lib/sanity'
+import sanityClient from '@sanity/client'
+const config = {
+  dataset: process.env.SANITY_STUDIO_API_DATASET,
+  projectId: process.env.SANITY_STUDIO_API_PROJECT_ID,
+  useCdn: process.env.NODE_ENV === 'production',
+  token: process.env.SANITY_API_TOKEN,
+}
+const client = sanityClient(config)
 
 export default async function createComment(req, res) {
   const { _id, name, email, comment} = JSON.parse(req.body)
   try {
-    await previewClient.create({
+    await client.create({
       _type: 'comment',
       post: {
         _type: 'reference',
