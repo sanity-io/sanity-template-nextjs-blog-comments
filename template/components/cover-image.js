@@ -11,7 +11,7 @@ export default function CoverImage({ title, url, slug }) {
       className={cn('shadow-small', {
         'hover:shadow-medium transition-shadow duration-200': slug,
       })}
-      src={imageBuilder.image(url).height(1000).width(2000).url()}
+      src={imageBuilder(url).height(1000).width(2000).url()}
     />
   )
 
