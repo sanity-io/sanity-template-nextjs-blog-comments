@@ -19,7 +19,7 @@ export default function Intro() {
           href={CMS_URL}
           className="underline hover:text-success duration-200 transition-colors"
         >
-          {CMS_NAME}
+          Sanity.io
         </a>
         .
       </h4>
