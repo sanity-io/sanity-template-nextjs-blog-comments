@@ -45,15 +45,15 @@ export default function Form ({_id}) {
       <input ref={register} type="hidden" name="_id" value={_id} />
       <label className="block mb-5">
         <span className="text-gray-700">Name</span>
-        <input name="name" ref={register({required: true})} className="form-input mt-1 block w-full" placeholder="John Appleseed"/>
+        <input name="name" ref={register({required: true})} className="shadow border rounded py-2 px-3 form-input mt-1 block w-full" placeholder="John Appleseed"/>
       </label>
       <label className="block mb-5">
         <span className="text-gray-700">Email</span>
-        <input name="email" type="email" ref={register({required: true})} className="form-input mt-1 block w-full" placeholder="your@email.com"/>
+        <input name="email" type="email" ref={register({required: true})} className="shadow border rounded py-2 px-3 form-input mt-1 block w-full" placeholder="your@email.com"/>
       </label>
       <label className="block mb-5">
         <span className="text-gray-700">Comment</span>
-        <textarea ref={register({required: true})} name="comment" className="form-textarea mt-1 block w-full" rows="8" placeholder="Enter some long form content."></textarea>
+        <textarea ref={register({required: true})} name="comment" className="shadow border rounded py-2 px-3  form-textarea mt-1 block w-full" rows="8" placeholder="Enter some long form content."></textarea>
       </label>
       {/* errors will return when field validation fails  */}
       {errors.exampleRequired && <span>This field is required</span>}
