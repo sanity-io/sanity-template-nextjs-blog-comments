@@ -1,7 +1,7 @@
 {
     "version": 2,
     "title": "Next.js Blog with Comments",
-    "description": "A Next.js blog with comments. This is based on Vercel's Sanity + Next.js demo.",
+    "description": "A Next.js + Sanity blog with comments store in Studio via API routes.",
     "previewMedia": {
       "type": "image",
       "src": "assets/preview-image.jpg",
