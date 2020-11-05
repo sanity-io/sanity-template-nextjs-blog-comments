@@ -29,6 +29,10 @@
           "role": "write",
           "envVar": "SANITY_API_TOKEN"
         }
-      ]
+      ],
+      "envVars": {
+        "projectId": ["NEXT_PUBLIC_SANITY_PROJECT_ID"],
+        "dataset": ["NEXT_PUBLIC_SANITY_DATASET"]
+      }
     }
   }
