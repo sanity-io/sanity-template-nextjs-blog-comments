@@ -19,7 +19,7 @@ const postFields = `
   'date': publishedAt,
   excerpt,
   'slug': slug.current,
-  'coverImage': mainImage.asset->url,
+  'coverImage': mainImage,
   'author': author->{name, 'picture': image.asset->url},
 `
 
@@ -27,7 +27,7 @@ const getClient = (preview) => (preview ? previewClient : client)
 
 export async function getPreviewPostBySlug(slug) {
   const data = await getClient(true).fetch(
-    `*[_type == "post" && slug.current == $slug] | order(dpublishedAtate desc){
+    `*[_type == "post" && slug.current == $slug] | order(publishedAt desc){
       ${postFields}
       body
     }`,
@@ -43,7 +43,7 @@ export async function getAllPostsWithSlug() {
 
 export async function getAllPostsForHome(preview) {
   const results = await getClient(preview)
-    .fetch(`*[_type == "post"] | order(date desc, _updatedAt desc){
+    .fetch(`*[_type == "post"] | order(publishedAt desc){
       ${postFields}
     }`)
   return getUniquePosts(results)

@@ -2,37 +2,21 @@
 
 This is a demo of how to add a simple comment section to blog post using [Next.js](https://nextjs.org), [Sanity.io](https://www.sanity.io), and [Vercel](https://vercel.com).
 
-# Note: You automatically have an env variable for your dataset and project id, but you'll need to create a token in [manage.sanity.io](https://manage.sanity.io) to allow the Starter's comments to post to your Studio
 
 ### Running the front-end
 
-You'll need to create a `.env.local` file to store a few environment variables that Next will use to pull data from the Sanity API.
-
-```js
-SANITY_API_TOKEN="API-TOKEN-FROM MANAGE.SANITY.IO"
-```
+Rename the `.env.test` file to `.env` and store the environment variables that Next and Sanity will use to pull data from the Sanity API. You can get or create the tokens, ids, and secrets from [manage.sanity.io](https://manage.sanity.io).
 
 Once those env variables are ready, you can run the following commands to get Next's development server up and running:
 
 ```bash
 npm install
 
+# Run the frontend
 npm run dev
+
+# Run the Studio
+npm run start:sanity
 ```
 
-The blog will be running at `http://localhost:3000`
-
-### Running Sanity Studio
-
-To run the Sanity Studio locally, you'll need to run the following commands:
-
-First install the Sanity CLI: `npm install -g @sanity/cli`.
-
-```bash
-# From the project root
-cd studio
-
-sanity start
-```
-
-The Studio will be running at `http://localhost:3333`
+The blog will be running at `http://localhost:3000`, the Studio will run at `http://localhost:3333`.
