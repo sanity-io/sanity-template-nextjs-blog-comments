@@ -5,7 +5,7 @@ export default function Form ({_id}) {
   const [formData, setFormData] = useState()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [hasSubmitted, setHasSubmitted] = useState(false)
-  const { register, handleSubmit, watch, errors } = useForm()
+  const { register, handleSubmit, watch, formState: { errors } } = useForm()
   const onSubmit = async data => {
     setIsSubmitting(true)
     let response
@@ -42,18 +42,18 @@ export default function Form ({_id}) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-lg" disabled>
-      <input ref={register} type="hidden" name="_id" value={_id} />
+      <input {...register("_id")} type="hidden" name="_id" value={_id} />
       <label className="block mb-5">
         <span className="text-gray-700">Name</span>
-        <input name="name" ref={register({required: true})} className="shadow border rounded py-2 px-3 form-input mt-1 block w-full" placeholder="John Appleseed"/>
+        <input name="name" {...register("name", {required: true})} className="shadow border rounded py-2 px-3 form-input mt-1 block w-full" placeholder="John Appleseed"/>
       </label>
       <label className="block mb-5">
         <span className="text-gray-700">Email</span>
-        <input name="email" type="email" ref={register({required: true})} className="shadow border rounded py-2 px-3 form-input mt-1 block w-full" placeholder="your@email.com"/>
+        <input name="email" type="email" {...register("email", {required: true})} className="shadow border rounded py-2 px-3 form-input mt-1 block w-full" placeholder="your@email.com"/>
       </label>
       <label className="block mb-5">
         <span className="text-gray-700">Comment</span>
-        <textarea ref={register({required: true})} name="comment" className="shadow border rounded py-2 px-3  form-textarea mt-1 block w-full" rows="8" placeholder="Enter some long form content."></textarea>
+        <textarea {...register("comment", {required: true})} name="comment" className="shadow border rounded py-2 px-3  form-textarea mt-1 block w-full" rows="8" placeholder="Enter some long form content."></textarea>
       </label>
       {/* errors will return when field validation fails  */}
       {errors.exampleRequired && <span>This field is required</span>}
