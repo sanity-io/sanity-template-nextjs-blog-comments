@@ -23,7 +23,15 @@ The blog will be running at `http://localhost:3000`
 
 ### Running Sanity Studio
 
-To run the Sanity Studio locally, you'll need to run the following commands:
+To run the Sanity Studio locally, you'll need to create a `.env.development` file under `/studio` to store a few environment variables to connect to your Sanity API dataset.
+
+```js
+# For Studio
+SANITY_STUDIO_API_PROJECT_ID="yourId"
+SANITY_STUDIO_API_DATASET="your_dataset"
+```
+
+Then, run the following commands:
 
 First install the Sanity CLI: `npm install -g @sanity/cli`.
 
