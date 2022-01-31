@@ -1,6 +1,9 @@
+import { UserIcon } from '@sanity/icons'
+
 export default {
   name: 'author',
   title: 'Author',
+  icon: UserIcon,
   type: 'document',
   fields: [
     {

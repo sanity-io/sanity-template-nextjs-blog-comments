@@ -1,6 +1,9 @@
+import { DocumentIcon } from '@sanity/icons'
+
 export default {
   name: 'post',
   title: 'Post',
+  icon: DocumentIcon,
   type: 'document',
   fields: [
     {
