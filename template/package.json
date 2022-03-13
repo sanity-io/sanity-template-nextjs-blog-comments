@@ -11,6 +11,8 @@
     "postinstall": "lerna bootstrap"
   },
   "dependencies": {
+    "@emotion/react": "^11.8.1",
+    "@emotion/styled": "^11.8.1",
     "@portabletext/react": "^1.0.1",
     "@sanity/client": "^2.23.2",
     "@sanity/image-url": "^1.0.1",
