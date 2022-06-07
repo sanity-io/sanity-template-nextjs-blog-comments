@@ -1,8 +1,8 @@
 {
   "root": true,
   "api": {
-    "projectId": "PLACEHOLDER_ENV_VARIABLES_WILL_HANDLE_FOR_US",
-    "dataset": "PLACEHOLDER_ENV_VARIABLES_WILL_HANDLE_FOR_US"
+    "projectId": "<#< sanity.projectId >#>",
+    "dataset": "<#< sanity.dataset >#>"
   },
   "project": {
     "name": "Next.js Comment-enabled blog",
@@ -17,9 +17,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
