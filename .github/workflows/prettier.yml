@@ -1,0 +1,31 @@
+name: 🤖 Auto Prettier ✨
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  run:
+    name: Prettier if needed
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version: lts/*
+      - run: npm ci --no-scripts
+      - name: check if workflows needs prettier
+        run: npx prettier --ignore-path .gitignore --cache --check ".github/workflows/**/*.yml" || (echo "An action can't make changes to actions, you'll have to run prettier manually" && exit 1)
+      - run: npx prettier --ignore-path .gitignore --cache --write .
+      - uses: EndBug/add-and-commit@v9
+        with:
+          commit: --no-verify
+          message: "chore(prettier): prettier --ignore-path .gitignore --write ."
