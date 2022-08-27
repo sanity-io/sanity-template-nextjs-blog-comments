@@ -1,10 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "start": "npx @sanity/cli start",
     "build": "npx @sanity/cli build ../public/studio -y",
+    "env": "cp ../.env .env.development",
     "prestart": "npm run env",
-    "env": "cp ../.env .env.development"
+    "start": "npx @sanity/cli start"
   },
   "dependencies": {
     "@sanity/base": "^2.31.0",

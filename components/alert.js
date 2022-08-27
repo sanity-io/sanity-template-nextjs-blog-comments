@@ -5,12 +5,12 @@ export default function Alert({ preview }) {
   return (
     <div
       className={cn('border-b', {
-        'bg-accent-7 border-accent-7 text-white': preview,
-        'bg-accent-1 border-accent-2': !preview,
+        'border-accent-7 bg-accent-7 text-white': preview,
+        'border-accent-2 bg-accent-1': !preview,
       })}
     >
       <Container>
-        <div className="py-2 text-sm text-center">
+        <div className="py-2 text-center text-sm">
           {preview ? (
             <>
               This page is a preview.{' '}
