@@ -1,8 +1,8 @@
-import Avatar from "../components/avatar";
-import Date from "../components/date";
-import CoverImage from "./cover-image";
-import Link from "next/link";
-import { imageBuilder } from "../lib/sanity";
+import Avatar from '../components/avatar'
+import Date from '../components/date'
+import CoverImage from './cover-image'
+import Link from 'next/link'
+import { imageBuilder } from '../lib/sanity'
 export default function PostPreview({
   title,
   coverImage,
@@ -32,5 +32,5 @@ export default function PostPreview({
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <Avatar name={author?.name} picture={author?.picture} />
     </div>
-  );
+  )
 }

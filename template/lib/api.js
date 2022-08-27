@@ -1,16 +1,16 @@
-import client, { previewClient } from "./sanity";
+import client, { previewClient } from './sanity'
 
 const getUniquePosts = (posts) => {
-  const slugs = new Set();
+  const slugs = new Set()
   return posts.filter((post) => {
     if (slugs.has(post.slug)) {
-      return false;
+      return false
     } else {
-      slugs.add(post.slug);
-      return true;
+      slugs.add(post.slug)
+      return true
     }
-  });
-};
+  })
+}
 
 const postFields = `
   _id,
@@ -21,9 +21,9 @@ const postFields = `
   'slug': slug.current,
   'coverImage': mainImage,
   'author': author->{name, 'picture': image.asset->url},
-`;
+`
 
-const getClient = (preview) => (preview ? previewClient : client);
+const getClient = (preview) => (preview ? previewClient : client)
 
 export async function getPreviewPostBySlug(slug) {
   const data = await getClient(true).fetch(
@@ -32,25 +32,25 @@ export async function getPreviewPostBySlug(slug) {
       body
     }`,
     { slug }
-  );
-  return data[0];
+  )
+  return data[0]
 }
 
 export async function getAllPostsWithSlug() {
-  const data = await client.fetch(`*[_type == "post"]{ 'slug': slug.current }`);
-  return data;
+  const data = await client.fetch(`*[_type == "post"]{ 'slug': slug.current }`)
+  return data
 }
 
 export async function getAllPostsForHome(preview) {
   const results = await getClient(preview)
     .fetch(`*[_type == "post"] | order(publishedAt desc){
       ${postFields}
-    }`);
-  return getUniquePosts(results);
+    }`)
+  return getUniquePosts(results)
 }
 
 export async function getPostAndMorePosts(slug, preview) {
-  const curClient = getClient(preview);
+  const curClient = getClient(preview)
   const [post, morePosts] = await Promise.all([
     curClient
       .fetch(
@@ -78,6 +78,6 @@ export async function getPostAndMorePosts(slug, preview) {
       }[0...2]`,
       { slug }
     ),
-  ]);
-  return { post, morePosts: getUniquePosts(morePosts) };
+  ])
+  return { post, morePosts: getUniquePosts(morePosts) }
 }
