@@ -22,4 +22,4 @@ jobs:
       - uses: EndBug/add-and-commit@v9
         with:
           commit: --no-verify
-          message: "chore(prettier): ooops missed a spot ✨"
+          message: 'chore(prettier): ooops missed a spot ✨'
