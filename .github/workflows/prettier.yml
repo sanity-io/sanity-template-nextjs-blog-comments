@@ -11,6 +11,10 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
 
+defaults:
+  run:
+    working-directory: template
+
 jobs:
   run:
     name: Prettier if needed
@@ -21,7 +25,7 @@ jobs:
         with:
           cache: npm
           node-version: lts/*
-          working-directory: ./template
+          cache-dependency-path: template/package-lock.json
       - run: npm install --no-scripts --only-dev
       - name: check if workflows needs prettier
         run: npx prettier --ignore-path .gitignore --cache --check ".github/workflows/**/*.yml" || (echo "An action can't make changes to actions, you'll have to run prettier manually" && exit 1)
