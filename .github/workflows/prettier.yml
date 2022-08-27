@@ -22,7 +22,7 @@ jobs:
           cache: npm
           node-version: lts/*
           working-directory: ./template
-      - run: npm ci --no-scripts
+      - run: npm install --no-scripts --only-dev
       - name: check if workflows needs prettier
         run: npx prettier --ignore-path .gitignore --cache --check ".github/workflows/**/*.yml" || (echo "An action can't make changes to actions, you'll have to run prettier manually" && exit 1)
       - run: npx prettier --ignore-path .gitignore --cache --write .
