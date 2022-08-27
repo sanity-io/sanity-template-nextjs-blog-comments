@@ -1,6 +1,6 @@
 # Next.js blog with comment section [![Prettier](https://github.com/sanity-io/sanity-template-nextjs-blog-comments/actions/workflows/prettier.yml/badge.svg?event=push)](https://github.com/sanity-io/sanity-template-nextjs-blog-comments/actions/workflows/prettier.yml) [![CI](https://github.com/sanity-io/sanity-template-nextjs-blog-comments/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/sanity-io/sanity-template-nextjs-blog-comments/actions/workflows/ci.yml) ![Vercel](https://vercelbadge.vercel.app/api/sanity-io/sanity-template-nextjs-blog-comments)
 
-> ### [Live demo](https://template-nextjs-blog-comments.sanity.build/)
+### [Live demo](https://template-nextjs-blog-comments.sanity.build/)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsanity-io%2Fsanity-template-nextjs-blog-comments&project-name=sanity-next-blog-comments&repository-name=sanity-next-blog-comments&demo-title=Next.js%20Blog%20with%20Comments&demo-description=A%20Next.js%20%2B%20Sanity%20blog%20with%20comments%20stored%20in%20Studio%20via%20API%20routes.&demo-url=https%3A%2F%2Ftemplate-nextjs-blog-comments.sanity.build%2F&demo-image=https%3A%2F%2Fraw.githubusercontent.com%2Fsanity-io%2Fsanity-template-nextjs-blog-comments%2Fmain%2F.sanity-template%2Fassets%2Fpreview-image.jpg&integration-ids=oac_hb2LITYajhRQ0i4QznmKH7gx)
 
