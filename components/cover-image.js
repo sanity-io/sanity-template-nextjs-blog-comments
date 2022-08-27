@@ -1,6 +1,6 @@
 import cn from 'classnames'
 import Link from 'next/link'
-import { imageBuilder } from '../lib/sanity'
+import { urlForImage } from '../lib/sanity'
 
 export default function CoverImage({ title, url, imageObject, slug }) {
   const image = (
@@ -11,7 +11,7 @@ export default function CoverImage({ title, url, imageObject, slug }) {
       className={cn('shadow-small', {
         'hover:shadow-medium transition-shadow duration-200': slug,
       })}
-      src={imageBuilder(imageObject).width(1240).height(540).url()}
+      src={urlForImage(imageObject).width(1240).height(540).url()}
     />
   )
 
