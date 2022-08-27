@@ -11,6 +11,10 @@
     "start:sanity": "cpy .env ./studio --rename .env.development && cd studio && sanity start",
     "start:web": "next start"
   },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
   "dependencies": {
     "@portabletext/react": "^1.0.1",
     "@sanity/client": "^2.23.2",
