@@ -1,11 +1,6 @@
 name: 🤖 Auto Prettier ✨
 
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-  workflow_dispatch:
+on: [push, workflow_dispatch]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
@@ -23,9 +18,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          cache: npm
           node-version: lts/*
-          cache-dependency-path: template/package-lock.json
       - run: npm install --ignore-scripts --only-dev
       - run: npx prettier --ignore-path .gitignore --cache --write .
       - uses: EndBug/add-and-commit@v9
