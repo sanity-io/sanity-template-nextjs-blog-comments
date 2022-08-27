@@ -1,6 +1,6 @@
 # Next.js blog with comment section
 
-![Vercel](https://vercelbadge.vercel.app/api/sanity-io/sanity-template-nextjs-blog-comments)
+[![Prettier](https://github.com/sanity-io/sanity-template-nextjs-blog-comments/actions/workflows/prettier.yml/badge.svg?event=push)](https://github.com/sanity-io/sanity-template-nextjs-blog-comments/actions/workflows/prettier.yml) [![CI](https://github.com/sanity-io/sanity-template-nextjs-blog-comments/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/sanity-io/sanity-template-nextjs-blog-comments/actions/workflows/ci.yml) ![Vercel](https://vercelbadge.vercel.app/api/sanity-io/sanity-template-nextjs-blog-comments)
 
 [Live demo](https://template-nextjs-blog-comments.sanity.build/)
 
