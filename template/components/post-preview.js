@@ -1,8 +1,8 @@
-import Avatar from '../components/avatar'
-import Date from '../components/date'
-import CoverImage from './cover-image'
-import Link from 'next/link'
-import {imageBuilder} from '../lib/sanity'
+import Avatar from "../components/avatar";
+import Date from "../components/date";
+import CoverImage from "./cover-image";
+import Link from "next/link";
+import { imageBuilder } from "../lib/sanity";
 export default function PostPreview({
   title,
   coverImage,
@@ -14,7 +14,12 @@ export default function PostPreview({
   return (
     <div>
       <div className="mb-5">
-        <CoverImage slug={slug} title={title} imageObject={coverImage} url={imageBuilder(coverImage).url()} />
+        <CoverImage
+          slug={slug}
+          title={title}
+          imageObject={coverImage}
+          url={imageBuilder(coverImage).url()}
+        />
       </div>
       <h3 className="text-3xl mb-3 leading-snug">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
@@ -27,5 +32,5 @@ export default function PostPreview({
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <Avatar name={author?.name} picture={author?.picture} />
     </div>
-  )
+  );
 }

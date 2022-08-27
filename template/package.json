@@ -2,14 +2,14 @@
   "name": "cms-sanity",
   "version": "1.0.0",
   "scripts": {
-    "fmt": "prettier --ignore-path .gitignore --write --cache .",
-    "dev": "next",
     "build": "npm run build:sanity && pwd && npm run build:web",
-    "build:web": "next build",
-    "start:web": "next start",
     "build:sanity": "cd studio && sanity build ../public/studio -y && cd ..",
+    "build:web": "next build",
+    "dev": "next",
+    "fmt": "prettier --ignore-path .gitignore --write --cache .",
+    "postinstall": "lerna bootstrap",
     "start:sanity": "cpy .env ./studio --rename .env.development && cd studio && sanity start",
-    "postinstall": "lerna bootstrap"
+    "start:web": "next start"
   },
   "dependencies": {
     "@portabletext/react": "^1.0.1",

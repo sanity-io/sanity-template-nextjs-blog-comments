@@ -1,51 +1,51 @@
-import { UserIcon } from '@sanity/icons'
+import { UserIcon } from "@sanity/icons";
 
 export default {
-  name: 'author',
-  title: 'Author',
+  name: "author",
+  title: "Author",
   icon: UserIcon,
-  type: 'document',
+  type: "document",
   fields: [
     {
-      name: 'name',
-      title: 'Name',
-      type: 'string'
+      name: "name",
+      title: "Name",
+      type: "string",
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
+      name: "slug",
+      title: "Slug",
+      type: "slug",
       options: {
-        source: 'name',
-        maxLength: 96
-      }
+        source: "name",
+        maxLength: 96,
+      },
     },
     {
-      name: 'image',
-      title: 'Image',
-      type: 'image',
+      name: "image",
+      title: "Image",
+      type: "image",
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
-      name: 'bio',
-      title: 'Bio',
-      type: 'array',
+      name: "bio",
+      title: "Bio",
+      type: "array",
       of: [
         {
-          title: 'Block',
-          type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: []
-        }
-      ]
-    }
+          title: "Block",
+          type: "block",
+          styles: [{ title: "Normal", value: "normal" }],
+          lists: [],
+        },
+      ],
+    },
   ],
   preview: {
     select: {
-      title: 'name',
-      media: 'image'
-    }
-  }
-}
+      title: "name",
+      media: "image",
+    },
+  },
+};
