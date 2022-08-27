@@ -5,8 +5,8 @@
     "build:sanity": "cd studio && sanity build ../public/studio -y && cd ..",
     "build:web": "next build",
     "dev": "next",
-    "postinstall": "(cd studio && yarn)",
     "fmt": "prettier --ignore-path .gitignore --write --cache .",
+    "postinstall": "(cd studio && yarn)",
     "start:sanity": "cpy .env ./studio --rename .env.development && cd studio && sanity start",
     "start:web": "next start"
   },
