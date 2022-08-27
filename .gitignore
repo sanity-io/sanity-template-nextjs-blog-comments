@@ -36,3 +36,6 @@ yarn-error.log*
 .next
 
 public/studio/*
+studio/package-lock.json
+yarn.lock
+!studio/yarn.lock
