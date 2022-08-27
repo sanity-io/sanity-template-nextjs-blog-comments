@@ -42,8 +42,7 @@ jobs:
           node-version: lts/*
           cache: yarn
           cache-dependency-path: studio/yarn.lock
-      - run: yarn install --frozen-lockfile 
+      - run: yarn install --frozen-lockfile
       - run: npm run build:sanity
       - run: npm run lint --if-present
       - run: npm run test --if-present
-        
