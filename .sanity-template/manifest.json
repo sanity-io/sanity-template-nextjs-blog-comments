@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "title": "Next.js Blog with Comments",
+  "description": "A Next.js + Sanity blog with comments stored in Studio via API routes.",
+  "previewMedia": {
+    "type": "image",
+    "src": ".sanity-template/assets/preview-image.jpg",
+    "alt": "Sanity + Vercel"
+  },
+  "technologies": [
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "url": "https://vercel.com/"
+    }
+  ],
+  "deployment": {
+    "provider": "vercel",
+    "studio": { "basePath": "/studio" },
+    "corsOrigins": [
+      {
+        "origin": "http://localhost:3000",
+        "allowCredentials": true
+      }
+    ],
+    "tokens": [
+      {
+        "label": "Comment token",
+        "role": "write",
+        "envVar": "SANITY_API_TOKEN"
+      }
+    ],
+    "envVars": {
+      "projectId": ["NEXT_PUBLIC_SANITY_PROJECT_ID"],
+      "dataset": ["NEXT_PUBLIC_SANITY_DATASET"]
+    }
+  }
+}

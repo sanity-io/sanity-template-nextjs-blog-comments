@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "npx @sanity/cli start",
+    "build": "npx @sanity/cli build ../public/studio -y",
+    "prestart": "npm run env",
+    "env": "cp ../.env .env.development"
+  },
+  "dependencies": {
+    "@sanity/base": "^2.25.4",
+    "@sanity/components": "^2.14.0",
+    "@sanity/core": "^2.25.0",
+    "@sanity/default-layout": "^2.25.4",
+    "@sanity/default-login": "^2.24.1",
+    "@sanity/desk-tool": "^2.25.4",
+    "@sanity/vision": "^2.25.4",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sanity-plugin-asset-source-unsplash": "^0.1.5",
+    "styled-components": "^5.3.3"
+  }
+}

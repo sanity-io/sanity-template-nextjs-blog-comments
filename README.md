@@ -1,16 +1,21 @@
 # Next.js blog with comment section
 
-This is a demo of how to add a simple comment section to blog post using [Next.js](https://nextjs.org), [Sanity.io](https://www.sanity.io), and [Vercel](https://vercel.com).
+[Live demo](https://template-nextjs-blog-comments.sanity.build/)
 
+![screenshot](https://user-images.githubusercontent.com/81981/187021365-005d3f77-d145-4b29-9ea6-4da62414a810.png)
+
+This is a demo of how to add a simple comment section to blog post using [Next.js](https://nextjs.org), [Sanity.io](https://www.sanity.io), and [Vercel](https://vercel.com).
 
 ### Running the front-end
 
-You'll need to create a `.env.local` file to store a few environment variables that Next will use to pull data from the Sanity API.
+You'll need to create a `.env` file to store a few environment variables that Next will use to pull data from the Sanity API.
 
 ```js
 SANITY_API_TOKEN=<API-TOKEN-FROM MANAGE.SANITY.IO>
 NEXT_PUBLIC_SANITY_PROJECT_ID=<YOUR-PROJECT-ID>
 NEXT_PUBLIC_SANITY_DATASET=<YOUR-DATASET-NAME>
+SANITY_STUDIO_API_PROJECT_ID=<YOUR-PROJECT-ID>
+SANITY_STUDIO_API_DATASET=<YOUR-DATASET-NAME>
 ```
 
 For instance, your file should look like this:
@@ -18,6 +23,8 @@ For instance, your file should look like this:
 SANITY_API_TOKEN=averylongstringofcharacters
 NEXT_PUBLIC_SANITY_PROJECT_ID=abcdefgh
 NEXT_PUBLIC_SANITY_DATASET=production
+SANITY_STUDIO_API_PROJECT_ID=abcdefgh
+SANITY_STUDIO_API_DATASET=production
 ```
 
 To find these, visit https://manage.sanity.io
@@ -34,22 +41,12 @@ Once those env variables are in place, you can run the following commands to get
 ```bash
 npm install
 
+# Run the frontend
 npm run dev
+
+# Run the Studio
+npm run start:sanity
 ```
 
-The blog will be running at `http://localhost:3000`
+The blog will be running at `http://localhost:3000`, the Studio will run at `http://localhost:3333`.
 
-### Running Sanity Studio
-
-To run the Sanity Studio locally, you'll need to run the following commands:
-
-First install the Sanity CLI: `npm install -g @sanity/cli`.
-
-```bash
-# From the project root
-cd studio
-
-sanity start
-```
-
-The Studio will be running at `http://localhost:3333`
