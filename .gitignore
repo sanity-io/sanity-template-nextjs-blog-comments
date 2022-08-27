@@ -1,5 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+node_modules
 # dependencies
 /node_modules
 /.pnp
@@ -14,11 +14,11 @@
 
 # production
 /build
-node_modules
+
 # misc
 .DS_Store
 *.pem
-template/public
+
 # debug
 npm-debug.log*
 yarn-debug.log*
@@ -33,3 +33,4 @@ yarn-error.log*
 
 # vercel
 .vercel
+.next

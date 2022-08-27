@@ -6,10 +6,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
 
-defaults:
-  run:
-    working-directory: template
-
 jobs:
   run:
     name: Prettier if needed
@@ -20,6 +16,8 @@ jobs:
         with:
           node-version: lts/*
       - run: npm install --ignore-scripts --only-dev
+      - name: check if workflows needs prettier
+        run: npx prettier --cache --check ".github/workflows/**/*.yml" || (echo "An action can't make changes to actions, you'll have to run prettier manually" && exit 1)
       - run: npx prettier --ignore-path .gitignore --cache --write .
       - uses: EndBug/add-and-commit@v9
         with:
