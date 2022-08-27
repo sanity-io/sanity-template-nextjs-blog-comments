@@ -1,4 +1,4 @@
-name: 🤖 Auto Prettier ✨
+name: Prettier
 
 on: [push, workflow_dispatch]
 
@@ -8,7 +8,7 @@ concurrency:
 
 jobs:
   run:
-    name: Prettier if needed
+    name: Any ugly code? 🤔
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -22,4 +22,4 @@ jobs:
       - uses: EndBug/add-and-commit@v9
         with:
           commit: --no-verify
-          message: 'chore(prettier): 🤖 ✨
+          message: 'chore(prettier): 🤖 ✨'

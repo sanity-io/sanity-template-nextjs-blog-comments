@@ -53,31 +53,31 @@ export default function Form({ _id }) {
       disabled
     >
       <input {...register('_id')} type="hidden" name="_id" value={_id} />
-      <label className="block mb-5">
+      <label className="mb-5 block">
         <span className="text-gray-700">Name</span>
         <input
           name="name"
           {...register('name', { required: true })}
-          className="shadow border rounded py-2 px-3 form-input mt-1 block w-full"
+          className="form-input mt-1 block w-full rounded border py-2 px-3 shadow"
           placeholder="John Appleseed"
         />
       </label>
-      <label className="block mb-5">
+      <label className="mb-5 block">
         <span className="text-gray-700">Email</span>
         <input
           name="email"
           type="email"
           {...register('email', { required: true })}
-          className="shadow border rounded py-2 px-3 form-input mt-1 block w-full"
+          className="form-input mt-1 block w-full rounded border py-2 px-3 shadow"
           placeholder="your@email.com"
         />
       </label>
-      <label className="block mb-5">
+      <label className="mb-5 block">
         <span className="text-gray-700">Comment</span>
         <textarea
           {...register('comment', { required: true })}
           name="comment"
-          className="shadow border rounded py-2 px-3  form-textarea mt-1 block w-full"
+          className="form-textarea mt-1 block w-full rounded  border py-2 px-3 shadow"
           rows="8"
           placeholder="Enter some long form content."
         ></textarea>
@@ -86,7 +86,7 @@ export default function Form({ _id }) {
       {errors.exampleRequired && <span>This field is required</span>}
       <input
         type="submit"
-        className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+        className="focus:shadow-outline rounded bg-purple-500 py-2 px-4 font-bold text-white shadow hover:bg-purple-400 focus:outline-none"
       />
     </form>
   )

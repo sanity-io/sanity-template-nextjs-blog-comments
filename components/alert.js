@@ -1,13 +1,12 @@
 import Container from './container'
 import cn from 'classnames'
-import { EXAMPLE_PATH } from '../lib/constants'
 
 export default function Alert({ preview }) {
   return (
     <div
       className={cn('border-b', {
-        'bg-accent-7 border-accent-7 text-white': preview,
-        'bg-accent-1 border-accent-2': !preview,
+        'border-accent-7 bg-accent-7 text-white': preview,
+        'border-accent-2 bg-accent-1': !preview,
       })}
     >
       <Container>
@@ -17,7 +16,7 @@ export default function Alert({ preview }) {
               This page is a preview.{' '}
               <a
                 href="/api/exit-preview"
-                className="underline hover:text-cyan duration-200 transition-colors"
+                className="underline transition-colors duration-200 hover:text-cyan"
               >
                 Click here
               </a>{' '}
@@ -27,8 +26,8 @@ export default function Alert({ preview }) {
             <>
               The source code for this blog is{' '}
               <a
-                href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-                className="underline hover:text-success duration-200 transition-colors"
+                href="https://github.com/sanity-io/sanity-template-nextjs-blog-comments"
+                className="underline transition-colors duration-200 hover:text-success"
               >
                 available on GitHub
               </a>
