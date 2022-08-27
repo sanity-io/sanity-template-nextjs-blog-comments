@@ -2,12 +2,12 @@
   "private": true,
   "scripts": {
     "build": "npm run build:sanity && pwd && npm run build:web",
-    "build:sanity": "cd studio && sanity build ../public/studio -y && cd ..",
+    "build:sanity": "npm --prefix studio run build",
     "build:web": "next build",
     "dev": "next",
     "fmt": "prettier --ignore-path .gitignore --write --cache .",
-    "postinstall": "(cd studio && yarn)",
-    "start:sanity": "cpy .env ./studio --rename .env.development && cd studio && sanity start",
+    "postinstall": "(cd studio && npx @sanity/cli install)",
+    "start:sanity": "npm --prefix studio run start",
     "start:web": "next start"
   },
   "prettier": {

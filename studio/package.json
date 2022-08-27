@@ -1,5 +1,11 @@
 {
   "private": true,
+  "scripts": {
+    "start": "npx @sanity/cli start",
+    "build": "npx @sanity/cli build ../public/studio -y",
+    "prestart": "npm run env",
+    "env": "cp ../.env .env.development"
+  },
   "dependencies": {
     "@sanity/base": "^2.25.4",
     "@sanity/components": "^2.14.0",
