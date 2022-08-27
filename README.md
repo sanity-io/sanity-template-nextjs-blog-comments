@@ -2,7 +2,7 @@
 
 [Live demo](https://template-nextjs-blog-comments.sanity.build/)
 
-![screenshot](https://user-images.githubusercontent.com/81981/187020976-333a9078-e4d5-4922-a94f-3011f2c556d2.png)
+![screenshot](https://user-images.githubusercontent.com/81981/187021365-005d3f77-d145-4b29-9ea6-4da62414a810.png)
 
 This is a demo of how to add a simple comment section to blog post using [Next.js](https://nextjs.org), [Sanity.io](https://www.sanity.io), and [Vercel](https://vercel.com).
 
@@ -23,3 +23,4 @@ npm run start:sanity
 ```
 
 The blog will be running at `http://localhost:3000`, the Studio will run at `http://localhost:3333`.
+
