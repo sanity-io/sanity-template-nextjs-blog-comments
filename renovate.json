@@ -7,7 +7,7 @@
   "packageRules": [
     {
       "matchPaths": ["studio/**"],
-      "ignorePresets": [
+      "extends": [
         "github>sanity-io/renovate-presets//ecosystem/studio-v2"
       ]
     }
