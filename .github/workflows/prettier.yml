@@ -21,6 +21,7 @@ jobs:
         with:
           cache: npm
           node-version: lts/*
+          working-directory: ./template
       - run: npm ci --no-scripts
       - name: check if workflows needs prettier
         run: npx prettier --ignore-path .gitignore --cache --check ".github/workflows/**/*.yml" || (echo "An action can't make changes to actions, you'll have to run prettier manually" && exit 1)
@@ -28,4 +29,4 @@ jobs:
       - uses: EndBug/add-and-commit@v9
         with:
           commit: --no-verify
-          message: "chore(prettier): prettier --ignore-path .gitignore --write ."
+          message: "chore(prettier): prettier --write --cache ."
