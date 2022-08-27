@@ -26,9 +26,7 @@ jobs:
           cache: npm
           node-version: lts/*
           cache-dependency-path: template/package-lock.json
-      - run: npm install --no-scripts --only-dev
-      - name: check if workflows needs prettier
-        run: npx prettier --ignore-path .gitignore --cache --check ".github/workflows/**/*.yml" || (echo "An action can't make changes to actions, you'll have to run prettier manually" && exit 1)
+      - run: npm install --ignore-scripts --only-dev
       - run: npx prettier --ignore-path .gitignore --cache --write .
       - uses: EndBug/add-and-commit@v9
         with:
