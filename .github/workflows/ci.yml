@@ -25,8 +25,8 @@ jobs:
           node-version: lts/*
           cache: npm
       - run: npm ci --ignore-scripts
+      - run: npm run build:web
       - run: npm run lint --if-present
-      - run: npm run build --if-present
       - run: npm run test --if-present
 
   studio:
@@ -43,7 +43,7 @@ jobs:
           cache: yarn
           cache-dependency-path: studio/yarn.lock
       - run: yarn install --frozen-lockfile 
+      - run: npm run build:sanity
       - run: npm run lint --if-present
-      - run: npm run build --if-present
       - run: npm run test --if-present
         

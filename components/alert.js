@@ -1,6 +1,5 @@
 import Container from './container'
 import cn from 'classnames'
-import { EXAMPLE_PATH } from '../lib/constants'
 
 export default function Alert({ preview }) {
   return (
@@ -11,13 +10,13 @@ export default function Alert({ preview }) {
       })}
     >
       <Container>
-        <div className="py-2 text-center text-sm">
+        <div className="py-2 text-sm text-center">
           {preview ? (
             <>
               This page is a preview.{' '}
               <a
                 href="/api/exit-preview"
-                className="underline hover:text-cyan duration-200 transition-colors"
+                className="underline transition-colors duration-200 hover:text-cyan"
               >
                 Click here
               </a>{' '}
@@ -27,8 +26,8 @@ export default function Alert({ preview }) {
             <>
               The source code for this blog is{' '}
               <a
-                href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-                className="underline hover:text-success duration-200 transition-colors"
+                href="https://github.com/sanity-io/sanity-template-nextjs-blog-comments"
+                className="underline transition-colors duration-200 hover:text-success"
               >
                 available on GitHub
               </a>
