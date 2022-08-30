@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@portabletext/react": "^1.0.6",
-    "@sanity/client": "^3.3.5",
+    "@sanity/client": "^3.3.6",
     "@sanity/image-url": "^1.0.1",
     "classnames": "^2.3.1",
     "date-fns": "^2.29.2",
