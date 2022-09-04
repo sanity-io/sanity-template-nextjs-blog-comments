@@ -27,7 +27,7 @@
     "react-hook-form": "^7.34.2"
   },
   "devDependencies": {
-    "@sanity/cli": "^2.31.0",
+    "@sanity/cli": "^2.31.1",
     "autoprefixer": "^10.4.8",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
