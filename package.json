@@ -20,11 +20,11 @@
     "@sanity/image-url": "^1.0.1",
     "classnames": "^2.3.2",
     "date-fns": "^2.29.3",
-    "next": "^12.3.0",
+    "next": "^12.3.1",
     "next-sanity": "^0.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.35.0"
+    "react-hook-form": "^7.36.0"
   },
   "devDependencies": {
     "@sanity/cli": "^2.33.2",
