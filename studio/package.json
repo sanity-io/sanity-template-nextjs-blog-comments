@@ -12,7 +12,7 @@
     "@sanity/core": "^2.34.0",
     "@sanity/default-layout": "^2.34.0",
     "@sanity/default-login": "^2.34.0",
-    "@sanity/desk-tool": "^2.34.0",
+    "@sanity/desk-tool": "^2.34.1",
     "@sanity/vision": "^2.34.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
