@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@sanity/cli": "^2.35.0",
-    "autoprefixer": "^10.4.12",
+    "autoprefixer": "^10.4.13",
     "postcss": "^8.4.18",
     "prettier": "^2.7.1",
     "prettier-plugin-packagejson": "^2.3.0",
